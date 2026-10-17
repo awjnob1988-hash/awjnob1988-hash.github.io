@@ -14,6 +14,26 @@
 
 @media(max-width:750px){.hero-photo{min-height:360px;right:18px;left:18px}.hero-photo img{display:block!important;min-height:100%;object-fit:cover}.hero-visual{min-height:385px}.product-preview img{display:block!important;opacity:1!important;width:100%;height:100%}.cat img{display:block;width:100%;height:100%;object-fit:cover}.detail-main img{display:block;opacity:1!important;max-width:100%;max-height:100%}}
 @media(prefers-reduced-motion:reduce){.fade{animation:none}}
+
+/* WhatsApp checkout — responsive form, order preview, and customer details */
+.checkout-modal{width:min(100%,560px);max-height:min(92vh,900px)}
+.checkout-summary{background:#f2f6f1;border:1px solid #e2ebe1;border-radius:16px;padding:10px 17px;margin:17px 0 8px}
+.checkout-summary .cartrow{padding:11px 0;line-height:1.9}
+.checkout-summary .cartrow:last-child{border-bottom:0}
+.checkout-summary .total{color:#214d3d;font-weight:800}
+.checkout-modal .field{margin-top:13px;font-size:12px}
+.checkout-modal .field input,.checkout-modal .field textarea{display:block;width:100%;margin-top:7px;padding:13px 14px;border:1px solid #dbe6dc;border-radius:12px;background:#fff;color:#213d30;font:inherit;font-size:13px;outline-color:#547b64}
+.checkout-modal .field textarea{min-height:78px;resize:vertical}
+.checkout-modal .field input:focus,.checkout-modal .field textarea:focus{border-color:#547b64;box-shadow:0 0 0 3px #547b641b}
+.checkout-modal .field input::placeholder,.checkout-modal .field textarea::placeholder{color:#9aaba0}
+.checkout-modal .checkout-fields{display:grid;grid-template-columns:1fr 1fr;gap:0 13px}
+.checkout-modal .checkout-fields .full{grid-column:1/-1}
+.checkout-modal .btn.checkout-send{background:#1d7854;margin-top:18px;font-size:13px;min-height:49px}
+.checkout-modal .btn.checkout-send:hover{background:#125d40}
+.checkout-hint{font-size:11px!important;color:#668173!important;line-height:1.9!important}
+.checkout-error{color:#b23c36!important;font-weight:700;min-height:0;margin:8px 0 0!important}
+.checkout-back{width:100%;display:block;border:0;background:none;color:#315643;text-align:center;padding:15px 5px 2px;font-weight:700;font-size:12px}
+@media(max-width:520px){.checkout-modal{padding:26px 19px 17px;border-radius:20px;max-height:calc(100dvh - 20px)}.checkout-modal .checkout-fields{grid-template-columns:1fr}.checkout-modal .checkout-fields .full{grid-column:auto}.checkout-modal .field{margin-top:12px}.checkout-modal .field input,.checkout-modal .field textarea{font-size:16px;padding:12px}.checkout-summary{padding:9px 13px}}
 </style>
 </head>
 <body>
@@ -27,7 +47,29 @@
 <section class="wrap section" id="about"><span class="kicker">SIMPLE & PERSONAL</span><h2>تجربة مريحة من البداية للنهاية</h2><div class="steps"><div class="step"><span>01.</span><h3>اختر التصميم</h3><p>استكشف الأقسام والموديلات، واختر النظارة التي تناسب ذوقك واحتياجك.</p></div><div class="step"><span>02.</span><h3>احجز فحصك</h3><p>قدّم طلب موعد لفحص البصر لتسهيل اختيار الحل الأنسب لك.</p></div><div class="step"><span>03.</span><h3>استمتع بإطلالتك</h3><p>تفاصيل بسيطة، وراحة يومية، وإطلالة تكمل أسلوبك الشخصي.</p></div></div><div class="newsletter"><div><h2>خلك أول من يعرف الجديد</h2><p>اشترك بقائمة أخبار المجموعات والعروض الجديدة.</p></div><form id="subscribeForm"><input type="email" required placeholder="بريدك الإلكتروني"><button class="btn">اشترك الآن</button></form></div></section></main>
 <footer class="footer"><div class="wrap"><div class="footgrid"><div><div class="brand"><span class="brand-icon">◉</span><span><span class="brand-name">رُؤيــة.</span><small>VISION OPTICAL</small></span></div><p>مساحتك لاكتشاف النظارات الطبية والشمسية والعدسات والإكسسوارات، مع خدمات حجز فحص البصر.</p></div><div><h3>استكشف</h3><a href="#categories">الأقسام</a><a href="#products">المنتجات</a><a href="#exam">فحص البصر</a></div><div><h3>معلومات</h3><a href="#about">من نحن</a><a href="#about">كيفية الطلب</a><a href="#exam">حجز موعد</a></div><div><h3>تواصل معنا</h3><p>العراق · أضف عنوان المتجر</p><p>أضف رقم الهاتف</p><p>أضف حساب إنستغرام</p></div></div><div class="copy">© 2026 رؤية للنظارات — نموذج أولي قابل للتخصيص. جميع الأسعار والمنتجات المعروضة أمثلة توضيحية.</div></div></footer>
 <div class="overlay" id="bookingOverlay"><div class="modal"><button class="close" data-close aria-label="إغلاق">×</button><span class="kicker">BOOK YOUR VISIT</span><h2>احجز موعد فحص البصر</h2><p>نموذج تجريبي لحجز موعد. يتم حفظ الطلب على جهازك فقط، ولا يُرسل إلى المتجر حاليًا.</p><form id="bookingForm"><label class="field">الاسم الكامل<input required name="name" placeholder="أدخل اسمك"></label><label class="field">رقم الهاتف<input required name="phone" inputmode="tel" pattern="[0-9٠-٩+\-\s]{7,18}" placeholder="07xxxxxxxxx"></label><label class="field">التاريخ المناسب<input required name="date" type="date" id="dateField"></label><label class="field">الفترة المفضلة<select name="period"><option>صباحًا</option><option>مساءً</option></select></label><button class="btn" type="submit">تسجيل طلب الموعد</button></form></div></div>
-<div class="overlay" id="cartOverlay"><div class="modal"><button class="close" data-close aria-label="إغلاق">×</button><h2>سلة المشتريات</h2><p>سلة تجريبية — لا يوجد ربط بدفع إلكتروني حتى الآن.</p><div class="cartlist" id="cartList"></div><div class="cartrow"><b>المجموع</b><b id="cartTotal">0 د.ع</b></div><button class="btn" id="checkoutBtn">متابعة الطلب</button></div></div><div class="overlay product-overlay" id="productOverlay"><div class="modal product-modal" role="dialog" aria-modal="true" aria-labelledby="detailTitle"><button class="close" data-close aria-label="إغلاق">×</button><div class="product-detail-layout"><div class="detail-media"><div class="detail-main"><img id="detailHeroImage" alt="صورة المنتج التوضيحية"></div><div class="gallery-hint">◉ اضغط على أي صورة صغيرة لمشاهدتها بالحجم الكبير</div><div class="detail-thumbs" id="detailThumbs"></div><p class="detail-disclaimer" id="detailImageLabel"></p></div><div class="detail-content"><span class="kicker" id="detailCategory"></span><h2 id="detailTitle"></h2><p class="detail-copy" id="detailDescription"></p><div class="detail-price" id="detailPrice"></div><div class="detail-specs" id="detailSpecs"></div><p class="detail-note">المعلومات والصور والأسعار للعرض التجريبي فقط، وتُحدَّث بالبيانات الحقيقية للمنتج قبل البيع.</p><button class="btn" id="detailAdd" data-add="">+ أضف إلى السلة</button><button class="detail-back" data-close>العودة للمنتجات ←</button></div></div></div></div><div class="toast" id="toast" role="status"></div>
+<div class="overlay" id="cartOverlay"><div class="modal"><button class="close" data-close aria-label="إغلاق">×</button><h2>سلة المشتريات</h2><p>راجع المنتجات والمجموع، ثم أكمل بيانات الزبون للانتقال إلى واتساب. لا يوجد دفع إلكتروني داخل الموقع.</p><div class="cartlist" id="cartList"></div><div class="cartrow"><b>المجموع</b><b id="cartTotal">0 د.ع</b></div><button class="btn" id="checkoutBtn">متابعة الطلب</button></div></div>
+<div class="overlay" id="checkoutOverlay"><div class="modal checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+  <button class="close" data-close type="button" aria-label="إغلاق">×</button>
+  <span class="kicker">ORDER VIA WHATSAPP</span>
+  <h2 id="checkoutTitle">إتمام الطلب</h2>
+  <p>أكمل تفاصيل التوصيل، ونجهّز لك رسالة بجميع محتويات السلة لإرسالها إلى واتساب المتجر.</p>
+  <div class="checkout-summary" id="checkoutSummary" aria-live="polite"></div>
+  <form id="checkoutForm">
+    <div class="checkout-fields">
+      <label class="field">الاسم الكامل <input name="customerName" required minlength="2" maxlength="80" autocomplete="name" placeholder="اسم الزبون"></label>
+      <label class="field">رقم هاتف الزبون <input name="customerPhone" required type="tel" inputmode="tel" maxlength="20" autocomplete="tel" pattern="[0-9٠-٩۰-۹+\s()\-]{10,20}" placeholder="07xxxxxxxxx"></label>
+      <label class="field">المحافظة <input name="governorate" required maxlength="60" placeholder="مثلاً: كربلاء" autocomplete="address-level1"></label>
+      <label class="field">المنطقة / الحي <input name="district" required maxlength="100" placeholder="الحي أو المنطقة" autocomplete="address-level2"></label>
+      <label class="field full">العنوان التفصيلي / أقرب نقطة دالة <textarea name="streetAddress" required maxlength="350" rows="2" placeholder="الشارع، المحلة، أقرب نقطة دالة" autocomplete="street-address"></textarea></label>
+      <label class="field full">ملاحظات على الطلب (اختياري) <textarea name="orderNotes" maxlength="350" rows="2" placeholder="مثلاً: لون الإطار أو ملاحظات التوصيل"></textarea></label>
+    </div>
+    <p class="checkout-hint">بعد الضغط على «تم» راح يفتح واتساب برسالة جاهزة. حتى يوصل الطلب للمتجر، اضغط زر الإرسال داخل واتساب.</p>
+    <p class="checkout-error" id="checkoutError" role="alert" aria-live="polite"></p>
+    <button type="submit" class="btn checkout-send">تم — الانتقال إلى واتساب ↗</button>
+  </form>
+  <button class="checkout-back" type="button" id="backToCart">← العودة إلى السلة</button>
+</div></div>
+<div class="overlay product-overlay" id="productOverlay"><div class="modal product-modal" role="dialog" aria-modal="true" aria-labelledby="detailTitle"><button class="close" data-close aria-label="إغلاق">×</button><div class="product-detail-layout"><div class="detail-media"><div class="detail-main"><img id="detailHeroImage" alt="صورة المنتج التوضيحية"></div><div class="gallery-hint">◉ اضغط على أي صورة صغيرة لمشاهدتها بالحجم الكبير</div><div class="detail-thumbs" id="detailThumbs"></div><p class="detail-disclaimer" id="detailImageLabel"></p></div><div class="detail-content"><span class="kicker" id="detailCategory"></span><h2 id="detailTitle"></h2><p class="detail-copy" id="detailDescription"></p><div class="detail-price" id="detailPrice"></div><div class="detail-specs" id="detailSpecs"></div><p class="detail-note">المعلومات والصور والأسعار للعرض التجريبي فقط، وتُحدَّث بالبيانات الحقيقية للمنتج قبل البيع.</p><button class="btn" id="detailAdd" data-add="">+ أضف إلى السلة</button><button class="detail-back" data-close>العودة للمنتجات ←</button></div></div></div></div><div class="toast" id="toast" role="status"></div>
 <script>
 // صور فوتوغرافية مؤقتة من مكتبة Pexels (تحتاج اتصال إنترنت).
 // لتغيير صور أي منتج لاحقاً: بدّل أرقام الصور في الصور الثلاث داخل gallery لهذا المنتج.
@@ -73,6 +115,11 @@ const products=[
 {id:10,name:'حافظة عدسات السفر',type:'إكسسوارات',cat:'accessories',price:12000,color:'متنوع',material:'حافظة عدسات',shape:'صغيرة',tag:'إضافة جديدة',gallery:[pexels(5843428),pexels(5843421),pexels(16022181)],desc:'حافظة صغيرة للعدسات اللاصقة ضمن قسم الإكسسوارات. الصور مرجعية من الإنترنت.'}
 ];
 
+
+// رقم واتساب المتجر: بعد تزويدنا به ضع الرقم بصيغة دولية، مثال: 9647XXXXXXXXX.
+// تركه فارغاً يجهّز الاستمارة لكنه يمنع إرسال طلب إلى جهة خاطئة.
+const STORE_WHATSAPP_NUMBER = '';
+
 const safeGet=k=>{try{return localStorage.getItem(k)}catch(_){return null}};
 const safeSet=(k,v)=>{try{localStorage.setItem(k,v)}catch(_){}};
 let initialCart=[];try{const value=JSON.parse(safeGet('visionCart')||'[]');if(Array.isArray(value))initialCart=value}catch(_){}
@@ -84,8 +131,71 @@ function galleryImages(p){return p.gallery.map((src,i)=>localProductArt(p,i));}
 function switchPhoto(idx){if(!currentProduct)return;currentPhoto=idx;const images=galleryImages(currentProduct);setLocalImage($('#detailHeroImage'),images[idx],photo(currentProduct.gallery[idx],1150));$('#detailHeroImage').alt=currentProduct.name+' — صورة رقم '+(idx+1);document.querySelectorAll('[data-thumb]').forEach(el=>el.classList.toggle('selected',Number(el.dataset.thumb)===idx));}
 function showProduct(id){const p=products.find(x=>x.id===id);if(!p)return;currentProduct=p;currentPhoto=0;$('#detailCategory').textContent=p.type;$('#detailTitle').textContent=p.name;$('#detailPrice').textContent=money(p.price);$('#detailDescription').textContent=p.desc;$('#detailImageLabel').textContent='تظهر صور مرجعية من الإنترنت عند توفرها، ورسم بديل عند تعذّر التحميل. نستبدلها لاحقاً بصور بضاعتك الأصلية.';$('#detailSpecs').innerHTML=[['التصنيف',p.type],['اللون',p.color],['النوع / المادة',p.material],['الشكل',p.shape]].map(([k,v])=>`<div><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('');$('#detailThumbs').innerHTML=galleryImages(p).map((src,i)=>`<button type="button" data-thumb="${i}" class="${i===0?'selected':''}" aria-label="الصورة ${i+1}"><img src="${src}" data-local="${src}" data-remote="${photo(p.gallery[i],460)}" alt="صورة المنتج ${i+1}" loading="lazy"></button>`).join('');setLocalImage($('#detailHeroImage'),galleryImages(p)[0],photo(p.gallery[0],1150));$('#detailHeroImage').alt=p.name+' — صورة رقم 1';upgradePhotos($('#detailThumbs'));$('#detailAdd').dataset.add=p.id;openModal('productOverlay');history.replaceState(null,'','#product-'+p.id);}
 
+
+function checkoutProducts(){
+ const grouped=new Map();
+ cart.forEach(id=>{const p=products.find(x=>x.id===Number(id));if(p){const item=grouped.get(p.id)||{product:p,qty:0};item.qty++;grouped.set(p.id,item)}});
+ return [...grouped.values()];
+}
+function renderCheckoutSummary(){
+ const items=checkoutProducts();
+ const sum=items.reduce((total,item)=>total+item.qty*item.product.price,0);
+ $('#checkoutSummary').innerHTML=items.map(item=>'<div class="cartrow"><span>'+esc(item.product.name)+' <b>× '+item.qty+'</b><br><small>'+esc(item.product.type)+'</small></span><b>'+money(item.qty*item.product.price)+'</b></div>').join('')+'<div class="cartrow total"><span>المجموع (بدون أجور التوصيل)</span><b>'+money(sum)+'</b></div>';
+ $('#checkoutError').textContent='';
+}
+function whatsappDestination(){
+ let number=String(STORE_WHATSAPP_NUMBER||'').replace(/[٠-٩]/g,d=>String('٠١٢٣٤٥٦٧٨٩'.indexOf(d))).replace(/[۰-۹]/g,d=>String('۰۱۲۳۴۵۶۷۸۹'.indexOf(d))).replace(/\D/g,'');
+ if(number.startsWith('00964'))number=number.slice(2);
+ else if(/^07\d{9}$/.test(number))number='964'+number.slice(1);
+ return /^\d{8,15}$/.test(number)?number:'';
+}
+function makeWhatsAppMessage(form){
+ const items=checkoutProducts();
+ const total=items.reduce((sum,item)=>sum+item.product.price*item.qty,0);
+ const str=v=>String(v||'').trim();
+ const lines=[
+ '🛍️ *طلب جديد من متجر رؤية للنظارات*',
+ '',
+ '👤 *بيانات الزبون*',
+ 'الاسم: '+str(form.customerName),
+ 'رقم الهاتف: '+str(form.customerPhone),
+ 'المحافظة: '+str(form.governorate),
+ 'المنطقة: '+str(form.district),
+ 'العنوان: '+str(form.streetAddress),
+ '',
+ '🛒 *المنتجات المختارة*'
+ ];
+ items.forEach((item,i)=>{
+  const p=item.product;
+  lines.push((i+1)+'. *'+p.name+'*');
+  lines.push('التصنيف: '+p.type);
+  lines.push('اللون: '+p.color+' | الشكل: '+p.shape);
+  lines.push('الكمية: '+item.qty);
+  lines.push('السعر: '+money(p.price)+' للقطعة');
+  lines.push('الإجمالي: '+money(p.price*item.qty));
+  lines.push('');
+ });
+ lines.push('💰 *المجموع: '+money(total)+'*');
+ lines.push('🚚 أجور التوصيل تُحدد عند تأكيد الطلب.');
+ if(str(form.orderNotes))lines.push('📝 ملاحظات: '+str(form.orderNotes));
+ lines.push('','يرجى تأكيد توفر المنتجات وتفاصيل التوصيل، شكرًا.');
+ return lines.join('\n');
+}
+function sendCheckoutToWhatsApp(event){
+ event.preventDefault();
+ const items=checkoutProducts();
+ if(!items.length){$('#checkoutError').textContent='السلة فارغة، أضف منتجًا قبل متابعة الطلب.';return}
+ const phone=whatsappDestination();
+ if(!phone){$('#checkoutError').textContent='بانتظار إضافة رقم واتساب المتجر حتى ينفتح الطلب على الرقم الصحيح.';return}
+ const values=Object.fromEntries(new FormData(event.currentTarget).entries());
+ const message=makeWhatsAppMessage(values);
+ const url='https://wa.me/'+phone+'?text='+encodeURIComponent(message);
+ // Use same-tab navigation for iOS and Android; the customer taps Send in WhatsApp.
+ window.location.assign(url);
+}
+
 function updateCart(){safeSet('visionCart',JSON.stringify(cart));$('#cartCount').textContent=cart.length;$('#cartTotal').textContent=money(cart.reduce((a,id)=>a+(products.find(p=>p.id===id)?.price||0),0));$('#cartList').innerHTML=cart.length?cart.map((id,i)=>{const p=products.find(x=>x.id===id);return `<div class="cartrow"><span>${esc(p?.name||'منتج')}<br><small>${money(p?.price||0)}</small></span><button data-remove="${i}">حذف</button></div>`}).join(''):'<div class="empty">سلتك فارغة حاليًا</div>'}
 function toast(s){$('#toast').textContent=s;$('#toast').classList.add('show');setTimeout(()=>$('#toast').classList.remove('show'),2500)}function openModal(id){$('#'+id).classList.add('open');document.body.style.overflow='hidden'}function closeAll(){document.querySelectorAll('.overlay').forEach(x=>x.classList.remove('open'));document.body.style.overflow='';if(location.hash.startsWith('#product-'))history.replaceState(null,'','#products')}
-document.addEventListener('click',e=>{let view=e.target.closest('[data-view]'),thumb=e.target.closest('[data-thumb]'),add=e.target.closest('[data-add]'),fav=e.target.closest('[data-fav]'),rem=e.target.closest('[data-remove]'),cat=e.target.closest('[data-category]');if(view)showProduct(Number(view.dataset.view));if(thumb)switchPhoto(Number(thumb.dataset.thumb));if(add){cart.push(Number(add.dataset.add));updateCart();toast('تمت إضافة المنتج للسلة')}if(fav){let id=Number(fav.dataset.fav);favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];render()}if(rem){cart.splice(Number(rem.dataset.remove),1);updateCart()}if(cat){active=cat.dataset.category;document.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b.dataset.filter===active));render()}if(e.target.matches('[data-book]'))openModal('bookingOverlay');if(e.target.matches('[data-close]')||e.target.classList.contains('overlay'))closeAll()});document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{active=b.dataset.filter;document.querySelectorAll('.filter').forEach(f=>f.classList.toggle('active',f===b));render()});$('#cartBtn').onclick=()=>{updateCart();openModal('cartOverlay')};$('#searchBtn').onclick=()=>{$('#searchBar').classList.toggle('open');$('#searchInput').focus()};$('#searchInput').oninput=e=>{query=e.target.value.trim();render()};$('#searchInput').onkeydown=e=>{if(e.key==='Enter'){$('#products').scrollIntoView();$('#searchBar').classList.remove('open')}};$('#mobileBtn').onclick=()=>$('#navlinks').classList.toggle('open');document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>$('#navlinks').classList.remove('open'));$('#dateField').min=new Date().toLocaleDateString('en-CA');$('#bookingForm').onsubmit=e=>{e.preventDefault();const fd=new FormData(e.target);const b=Object.fromEntries(fd.entries());safeSet('visionLastBooking',JSON.stringify(b));closeAll();e.target.reset();toast('تم تسجيل الطلب على هذا الجهاز فقط — يلزم ربطه بوسيلة تواصل للتأكيد')};$('#subscribeForm').onsubmit=e=>{e.preventDefault();toast('النشرة البريدية تحتاج ربطًا بخدمة إرسال قبل التشغيل');e.target.reset()};$('#checkoutBtn').onclick=()=>toast('الدفع والطلبات يحتاجان ربطًا بنظام متجر فعلي');document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});render();updateCart();upgradePhotos(document);
+document.addEventListener('click',e=>{let view=e.target.closest('[data-view]'),thumb=e.target.closest('[data-thumb]'),add=e.target.closest('[data-add]'),fav=e.target.closest('[data-fav]'),rem=e.target.closest('[data-remove]'),cat=e.target.closest('[data-category]');if(view)showProduct(Number(view.dataset.view));if(thumb)switchPhoto(Number(thumb.dataset.thumb));if(add){cart.push(Number(add.dataset.add));updateCart();toast('تمت إضافة المنتج للسلة')}if(fav){let id=Number(fav.dataset.fav);favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];render()}if(rem){cart.splice(Number(rem.dataset.remove),1);updateCart()}if(cat){active=cat.dataset.category;document.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b.dataset.filter===active));render()}if(e.target.matches('[data-book]'))openModal('bookingOverlay');if(e.target.matches('[data-close]')||e.target.classList.contains('overlay'))closeAll()});document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{active=b.dataset.filter;document.querySelectorAll('.filter').forEach(f=>f.classList.toggle('active',f===b));render()});$('#cartBtn').onclick=()=>{updateCart();openModal('cartOverlay')};$('#searchBtn').onclick=()=>{$('#searchBar').classList.toggle('open');$('#searchInput').focus()};$('#searchInput').oninput=e=>{query=e.target.value.trim();render()};$('#searchInput').onkeydown=e=>{if(e.key==='Enter'){$('#products').scrollIntoView();$('#searchBar').classList.remove('open')}};$('#mobileBtn').onclick=()=>$('#navlinks').classList.toggle('open');document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>$('#navlinks').classList.remove('open'));$('#dateField').min=new Date().toLocaleDateString('en-CA');$('#bookingForm').onsubmit=e=>{e.preventDefault();const fd=new FormData(e.target);const b=Object.fromEntries(fd.entries());safeSet('visionLastBooking',JSON.stringify(b));closeAll();e.target.reset();toast('تم تسجيل الطلب على هذا الجهاز فقط — يلزم ربطه بوسيلة تواصل للتأكيد')};$('#subscribeForm').onsubmit=e=>{e.preventDefault();toast('النشرة البريدية تحتاج ربطًا بخدمة إرسال قبل التشغيل');e.target.reset()};$('#checkoutBtn').onclick=()=>{if(!checkoutProducts().length){toast('السلة فارغة، أضف منتجًا أولاً');return}renderCheckoutSummary();closeAll();openModal('checkoutOverlay')};$('#checkoutForm').onsubmit=sendCheckoutToWhatsApp;$('#backToCart').onclick=()=>{closeAll();openModal('cartOverlay')};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});render();updateCart();upgradePhotos(document);
 </script>
 </body></html>
