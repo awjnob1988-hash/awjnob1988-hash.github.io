@@ -173,6 +173,10 @@ function makeWhatsAppMessage(form){
   lines.push('الكمية: '+item.qty);
   lines.push('السعر: '+money(p.price)+' للقطعة');
   lines.push('الإجمالي: '+money(p.price*item.qty));
+  // رابط الصورة المعروضة لنفس المنتج في الموقع، صورة واحدة لكل نوع منتج
+  if(Array.isArray(p.gallery)&&typeof p.gallery[0]==='string'&&/^https:\/\//.test(p.gallery[0])){
+   lines.push('📷 صورة المنتج: '+photo(p.gallery[0],1150));
+  }
   lines.push('');
  });
  lines.push('💰 *المجموع: '+money(total)+'*');
