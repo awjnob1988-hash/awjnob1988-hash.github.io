@@ -1,0 +1,100 @@
+/*
+ * RUYA / رؤية — Brand typography system v1
+ * ABC Favorit Arabic Bold Trial was provided for evaluation only.
+ * No trial font files are hosted or embedded on this public site.
+ * Replace --brand-display after acquiring a licensed webfont.
+ */
+:root{
+ --brand-display:"IBM Plex Sans Arabic","Alexandria",Tahoma,sans-serif;
+ --brand-text:"Alexandria",Tahoma,sans-serif;
+ --brand-type-ink:#18372b;
+}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-family:var(--brand-text);font-size:13px;line-height:1.75;font-weight:400;font-optical-sizing:auto}
+button,input,select,textarea{font-family:var(--brand-text)}
+h1,h2,h3,.brand-name,.feature b,.step>span,.hero-stats strong,.price,.detail-price,.checkout-summary .total{
+ font-family:var(--brand-display);
+ font-synthesis:weight;
+}
+::selection{background:#bed4c1;color:#143b2c}
+.brand-name{font-size:27px;font-weight:700;letter-spacing:normal;line-height:1.12;color:#173b30}
+.brand small{font-family:var(--brand-text);font-size:9px;font-weight:500;letter-spacing:1.7px;line-height:1.8}
+.links{font-size:12px;font-weight:600;gap:25px}
+.links a{position:relative;transition:color .2s}
+.links a::after{content:"";position:absolute;bottom:-7px;right:0;width:0;height:2px;background:#b59969;border-radius:99px;transition:width .25s}
+.links a:hover::after,.links a:focus-visible::after{width:100%}
+.mini{font-size:11px;letter-spacing:normal;line-height:1.75;font-weight:500}
+.hero .eyebrow{font-family:var(--brand-text);font-size:11px;font-weight:700;letter-spacing:.8px}
+.hero h1{font-family:var(--brand-display);font-size:clamp(43px,5.35vw,76px);font-weight:700;line-height:1.35;letter-spacing:normal;text-wrap:balance;margin:24px 0 20px}
+.hero h1 em{font:inherit;color:#5a826b;position:relative;z-index:0;white-space:normal}
+.hero h1 em::after{content:"";position:absolute;z-index:-1;right:0;left:0;bottom:5%;height:18%;background:linear-gradient(90deg,rgba(189,213,188,.46),rgba(204,173,120,.2));border-radius:9px;transform:skewX(-9deg)}
+.hero-copy>p{font-size:14px;font-weight:400;line-height:2.15;color:#617568;max-width:495px}
+.hero-stats strong{font-size:27px;line-height:1.45;letter-spacing:normal;font-weight:700}
+.hero-stats small{font-size:10px;font-weight:500;line-height:1.75}
+.navcta,.btn{font-family:var(--brand-text);font-size:12px;font-weight:700;letter-spacing:normal;min-height:44px}
+.kicker{font-family:var(--brand-text);font-size:10px;font-weight:700;letter-spacing:1.25px}
+.section h2{font-family:var(--brand-display);font-size:clamp(29px,3.05vw,40px);font-weight:700;line-height:1.45;letter-spacing:normal;text-wrap:balance;margin:12px 0 13px}
+.section h2::after{content:"";display:block;height:3px;width:45px;border-radius:9px;background:linear-gradient(90deg,#b99b6b,#547964);margin-top:13px}
+.lead{font-size:13px;font-weight:400;line-height:2.15}
+.subtlelink{font-size:12px;font-weight:700;line-height:1.8}
+.cat label{font-family:var(--brand-display);font-weight:700;font-size:16px;line-height:1.6}
+.cat label small{font-family:var(--brand-text);font-weight:400;font-size:11px;line-height:1.9}
+.feature b{font-size:13px;font-weight:700;line-height:1.6}
+.feature span{font-size:11px;font-weight:400;line-height:1.8}
+.prodtag,.photo-indicator{font-family:var(--brand-text);font-size:10px;font-weight:600}
+.prodtype{font-family:var(--brand-text);font-size:11px;color:#718577;font-weight:500}
+.prodname{font-family:var(--brand-display);font-size:16px;font-weight:700;line-height:1.65;letter-spacing:normal;margin:8px 0 13px;text-wrap:pretty}
+.product{transition:transform .24s ease,box-shadow .24s ease}
+.product:hover{transform:translateY(-3px);box-shadow:0 15px 38px rgba(24,57,41,.08)}
+.price{font-size:18px;font-weight:700;letter-spacing:normal;white-space:nowrap;color:#204b3c}
+.price small{font-size:10px;font-family:var(--brand-text)}
+.prodfoot .add{font-family:var(--brand-text)}
+.banner h2{font-family:var(--brand-display);font-size:clamp(29px,3vw,40px);font-weight:700;line-height:1.5;letter-spacing:normal}
+.banner p{font-size:13px;font-weight:400;line-height:2.1}
+.step>span{font-size:32px;font-weight:700}
+.step h3{font-size:18px;font-weight:700;line-height:1.6}
+.step p{font-size:12px;line-height:2.1}
+.newsletter h2{font-family:var(--brand-display);font-size:27px;font-weight:700;line-height:1.5}
+.newsletter p{font-size:12px;line-height:2}
+.footer h3{font-family:var(--brand-display);font-size:16px;font-weight:700;margin-bottom:20px}
+.footer p,.footer a{font-family:var(--brand-text);font-size:12px;font-weight:400;line-height:2.25}
+.footer .copy{font-size:10px;line-height:2}
+.modal h2{font-family:var(--brand-display);font-weight:700;font-size:27px;line-height:1.6}
+.modal p{font-size:12px;line-height:2.05}
+.field{font-size:12px;font-weight:600;line-height:1.8}
+.detail-content h2{font-family:var(--brand-display);font-size:35px;line-height:1.5;font-weight:700;letter-spacing:normal}
+.detail-copy{font-size:14px;line-height:2.1}
+.detail-price{font-size:27px;font-weight:700}
+.detail-specs div{font-size:12px;line-height:2}
+.cartrow,.checkout-summary .cartrow{font-size:12px;line-height:2}
+.checkout-modal .btn.checkout-send{font-size:13px;font-weight:700}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid #7a9c85;outline-offset:3px}
+@media(max-width:1050px){
+ .links{gap:14px;font-size:11px}
+ .hero h1{font-size:clamp(40px,5vw,65px)}
+}
+@media(max-width:750px){
+ .brand-name{font-size:22px}
+ .mini{font-size:10px}
+ .hero h1{font-size:clamp(35px,9vw,47px);line-height:1.45;margin:17px 0}
+ .hero-copy>p{font-size:12.5px;line-height:2.05}
+ .hero-stats strong{font-size:21px}
+ .section h2{font-size:29px;line-height:1.5}
+ .lead{font-size:12px}
+ .cat label{font-size:14px}
+ .cat label small{font-size:10px}
+ .feature b{font-size:11px}
+ .feature span{font-size:9.5px}
+ .prodname{font-size:13px;line-height:1.7}
+ .prodtype{font-size:10px}
+ .price{font-size:14px}
+ .prodtag,.photo-indicator{font-size:9px}
+ .banner h2{font-size:29px}
+ .step h3{font-size:17px}
+ .detail-content h2{font-size:25px}
+ .detail-copy{font-size:12px}
+ .modal h2{font-size:23px}
+ .footer p,.footer a{font-size:11px}
+ .newsletter h2{font-size:23px}
+}
+@media(prefers-reduced-motion:reduce){.product{transition:none}.product:hover{transform:none}}
