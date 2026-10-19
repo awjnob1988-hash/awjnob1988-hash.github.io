@@ -125,6 +125,38 @@ main{position:relative;overflow:hidden}
 #products,#categories,#groups,#exam,#about{scroll-margin-top:112px}
 @media(max-width:750px){#products,#categories,#groups,#exam,#about{scroll-margin-top:85px}.editorial-actions button.subtlelink{font-size:11px}.showcase-card{min-height:unset}}
 
+
+/* Coupon entry and price breakdown inside the shopping cart */
+.cart-coupon{padding:19px 18px 16px;margin:19px 0 14px;background:linear-gradient(145deg,#f4f8f2,#ffffff);border:1px solid #dce9db;border-radius:18px}
+.cart-coupon-heading{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:13px}
+.cart-coupon-heading b{font-size:13px;font-weight:700;color:#1b4534}
+.cart-coupon-heading small{font-size:10px;color:#6a8272}
+.cart-coupon-form{display:flex;gap:8px;align-items:stretch}
+.cart-coupon-form input{flex:1;min-width:0;width:100%;border:1px solid #d7e4d7;border-radius:12px;padding:12px 14px;background:#fff;font-size:13px;letter-spacing:.5px;text-transform:uppercase;direction:ltr;text-align:left;outline-color:#739c80;color:#193b2e}
+.cart-coupon-form input::placeholder{font-size:12px;letter-spacing:0;color:#94a598}
+.cart-coupon-form button{flex-shrink:0;border:0;border-radius:12px;padding:10px 16px;background:#214e3c;color:#fff;font-family:inherit;font-weight:700;font-size:12px}
+.cart-coupon-form button:hover{background:#14372a}
+.cart-coupon .coupon-feedback{min-height:18px;font-size:11px;line-height:1.8;margin:10px 0 0;color:#6a7e70}
+.cart-coupon .coupon-feedback.success{color:#216b45}
+.cart-coupon .coupon-feedback.error{color:#b34b43}
+.cart-coupon .coupon-remove{border:0;background:transparent;color:#a3473e;text-decoration:underline;font-size:11px;padding:2px 0;display:none;font-weight:600}
+.cart-coupon .coupon-remove.visible{display:inline-block}
+.cart-totals{padding:5px 0 0}
+.cart-totals .cartrow{padding:10px 0}
+.cart-totals .cartrow[hidden]{display:none!important}
+.cart-totals .grand-total{font-weight:800;color:#173f30;font-size:15px;border-top:1px solid #dce7dc;margin-top:5px}
+.cart-totals .coupon-discount-row b{color:#277b50}
+.cart-coupon-note{margin-top:6px!important;font-size:10px!important;line-height:1.9!important;color:#839385!important}
+.cart-item-discount{font-size:10px;color:#28754b;font-weight:600;margin-top:3px;display:block}
+.checkout-summary .coupon-summary-line{color:#247449;font-weight:700}
+@media(max-width:520px){
+ .cart-coupon{padding:14px 12px;margin-top:15px}
+ .cart-coupon-heading{flex-wrap:wrap}
+ .cart-coupon-form input{font-size:16px}
+ .cart-coupon-form button{padding:10px 13px}
+ .cart-totals .cartrow{gap:8px}
+}
+
 </style>
 <link rel="stylesheet" href="./brand-typography.css?v=1.0" />
 </head>
@@ -158,7 +190,21 @@ main{position:relative;overflow:hidden}
 <section class="wrap section" id="about"><span class="kicker">SIMPLE & PERSONAL</span><h2>رحلة شراء بسيطة من البداية للنهاية</h2><p class="lead">اختَر مجموعتك، شاهد تفاصيل المنتجات، وأرسل طلبك للمتجر عبر واتساب.</p><div class="quick-links"><a href="#groups">المجموعات</a><a href="#products">المنتجات</a><a href="#exam">فحص البصر</a></div><div class="steps"><div class="step"><span>01.</span><h3>اختر التصميم</h3><p>استكشف الأقسام والموديلات، واختر النظارة التي تناسب ذوقك واحتياجك.</p></div><div class="step"><span>02.</span><h3>احجز فحصك</h3><p>قدّم طلب موعد لفحص البصر لتسهيل اختيار الحل الأنسب لك.</p></div><div class="step"><span>03.</span><h3>استمتع بإطلالتك</h3><p>تفاصيل بسيطة، وراحة يومية، وإطلالة تكمل أسلوبك الشخصي.</p></div></div><div class="newsletter"><div><h2>خلك أول من يعرف الجديد</h2><p>اشترك بقائمة أخبار المجموعات والعروض الجديدة.</p></div><form id="subscribeForm"><input type="email" required placeholder="بريدك الإلكتروني"><button class="btn">اشترك الآن</button></form></div></section></main>
 <footer class="footer"><div class="wrap"><div class="footgrid"><div><div class="brand"><span class="brand-icon">◉</span><span><span class="brand-name">رُؤيــة.</span><small>VISION OPTICAL</small></span></div><p>مساحتك لاكتشاف النظارات الطبية والشمسية والعدسات والإكسسوارات، مع خدمات حجز فحص البصر.</p></div><div><h3>استكشف</h3><a href="#categories">الأقسام</a><a href="#products">المنتجات</a><a href="#exam">فحص البصر</a></div><div><h3>معلومات</h3><a href="#about">من نحن</a><a href="#about">كيفية الطلب</a><a href="#exam">حجز موعد</a></div><div><h3>تواصل معنا</h3><p>العراق · أضف عنوان المتجر</p><p>أضف رقم الهاتف</p><p>أضف حساب إنستغرام</p></div></div><div class="copy">© 2026 رؤية للنظارات — نموذج أولي قابل للتخصيص. جميع الأسعار والمنتجات المعروضة أمثلة توضيحية.</div></div></footer>
 <div class="overlay" id="bookingOverlay"><div class="modal"><button class="close" data-close aria-label="إغلاق">×</button><span class="kicker">BOOK YOUR VISIT</span><h2>احجز موعد فحص البصر</h2><p>نموذج تجريبي لحجز موعد. يتم حفظ الطلب على جهازك فقط، ولا يُرسل إلى المتجر حاليًا.</p><form id="bookingForm"><label class="field">الاسم الكامل<input required name="name" placeholder="أدخل اسمك"></label><label class="field">رقم الهاتف<input required name="phone" inputmode="tel" pattern="[0-9٠-٩+\-\s]{7,18}" placeholder="07xxxxxxxxx"></label><label class="field">التاريخ المناسب<input required name="date" type="date" id="dateField"></label><label class="field">الفترة المفضلة<select name="period"><option>صباحًا</option><option>مساءً</option></select></label><button class="btn" type="submit">تسجيل طلب الموعد</button></form></div></div>
-<div class="overlay" id="cartOverlay"><div class="modal"><button class="close" data-close aria-label="إغلاق">×</button><h2>سلة المشتريات</h2><p>راجع المنتجات والمجموع، ثم أكمل بيانات الزبون للانتقال إلى واتساب. لا يوجد دفع إلكتروني داخل الموقع.</p><div class="cartlist" id="cartList"></div><div class="cartrow"><b>المجموع</b><b id="cartTotal">0 د.ع</b></div><button class="btn" id="checkoutBtn">متابعة الطلب</button></div></div>
+<div class="overlay" id="cartOverlay"><div class="modal"><button class="close" data-close aria-label="إغلاق">×</button><h2>سلة المشتريات</h2><p>راجع المنتجات والمجموع، ثم أكمل بيانات الزبون للانتقال إلى واتساب. لا يوجد دفع إلكتروني داخل الموقع.</p><div class="cartlist" id="cartList"></div><div class="cart-coupon">
+<div class="cart-coupon-heading"><b>🎟️ عندك كوبون خصم؟</b><button type="button" class="coupon-remove" id="removeCoupon">إزالة الكوبون</button></div>
+<form id="couponForm" class="cart-coupon-form" novalidate>
+  <input id="couponCode" name="couponCode" maxlength="24" placeholder="أدخل رمز الخصم" autocomplete="off" aria-label="رمز كوبون الخصم" autocapitalize="characters" spellcheck="false">
+  <button type="submit">تطبيق</button>
+</form>
+<p class="coupon-feedback" id="couponFeedback" role="status" aria-live="polite">الخصم يُطبّق على المنتجات المشمولة فقط.</p>
+</div>
+<div class="cart-totals" aria-live="polite">
+  <div class="cartrow"><span>المجموع قبل الخصم</span><b id="cartSubtotal">0 د.ع</b></div>
+  <div class="cartrow coupon-discount-row" id="cartDiscountRow" hidden><span id="cartDiscountLabel">قيمة الخصم</span><b id="cartDiscount">− 0 د.ع</b></div>
+  <div class="cartrow grand-total"><b>المجموع بعد الخصم</b><b id="cartTotal">0 د.ع</b></div>
+</div>
+<p class="cart-coupon-note">المجموع لا يشمل أجور التوصيل. تتم مراجعة الكوبونات والأسعار عند تأكيد الطلب.</p>
+<button class="btn" id="checkoutBtn">متابعة الطلب</button></div></div>
 <div class="overlay" id="checkoutOverlay"><div class="modal checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
   <button class="close" data-close type="button" aria-label="إغلاق">×</button>
   <span class="kicker">ORDER VIA WHATSAPP</span>
@@ -249,10 +295,115 @@ function checkoutProducts(){
  cart.forEach(id=>{const p=products.find(x=>x.id===Number(id));if(p){const item=grouped.get(p.id)||{product:p,qty:0};item.qty++;grouped.set(p.id,item)}});
  return [...grouped.values()];
 }
+
+// Coupon catalog is maintained in coupons.json and is public client-side configuration.
+// Orders are confirmed by the shop on WhatsApp; this is NOT secure server-side price validation.
+let storeCoupons=[], couponsLoaded=false, couponsLoadError=false;
+let appliedCoupon='';
+const normalizeCouponCode=value=>String(value||'').trim().toUpperCase().replace(/\s+/g,'');
+function validCouponRule(c){
+ if(!c||c.enabled===false||!(/^[A-Z0-9_-]{3,24}$/.test(normalizeCouponCode(c.code))))return false;
+ if(!['percent','fixed'].includes(c.type)||!Number.isFinite(c.value)||c.value<=0)return false;
+ if(c.type==='percent'&&c.value>100)return false;
+ if(c.type==='fixed'&&!Number.isInteger(c.value))return false;
+ if(c.productIds!==undefined&&!Array.isArray(c.productIds))return false;
+ if(c.categories!==undefined&&!Array.isArray(c.categories))return false;
+ if(c.minQuantity!==undefined&&(!Number.isInteger(c.minQuantity)||c.minQuantity<1))return false;
+ if(c.minCartTotal!==undefined&&(!Number.isFinite(c.minCartTotal)||c.minCartTotal<0))return false;
+ if(c.maxDiscount!==undefined&&(!Number.isFinite(c.maxDiscount)||c.maxDiscount<=0))return false;
+ return true;
+}
+function couponEligibility(rule,p){
+ const ids=Array.isArray(rule.productIds)?rule.productIds:[];
+ const cats=Array.isArray(rule.categories)?rule.categories:[];
+ if(!ids.length&&!cats.length)return true;
+ return ids.includes(p.id)||cats.includes(p.cat);
+}
+function calculateOrder(code=appliedCoupon){
+ const lines=checkoutProducts().map(item=>({...item,subtotal:item.product.price*item.qty,discount:0}));
+ const subtotal=lines.reduce((a,line)=>a+line.subtotal,0);
+ let discount=0,matchedCoupon=null,reason='';
+ if(code){
+   if(!couponsLoaded){reason=couponsLoadError?'تعذّر تحميل قائمة الكوبونات، أعد المحاولة.':'جارٍ تحميل الكوبونات، حاول بعد لحظة.'}
+   else{
+     const rule=storeCoupons.find(c=>validCouponRule(c)&&normalizeCouponCode(c.code)===normalizeCouponCode(code));
+     if(!rule){reason='رمز الكوبون غير متاح أو غير صحيح.'}
+     else{
+       const eligible=lines.filter(l=>couponEligibility(rule,l.product));
+       const eligibleQty=eligible.reduce((a,l)=>a+l.qty,0);
+       const eligibleAmount=eligible.reduce((a,l)=>a+l.subtotal,0);
+       if(!eligible.length){reason='الكوبون لا يشمل أيًا من المنتجات الموجودة بالسلة.'}
+       else if(rule.minQuantity&&eligibleQty<rule.minQuantity){reason='هذا الكوبون يتطلب '+rule.minQuantity+' قطع من المنتجات المشمولة على الأقل.'}
+       else if(rule.minCartTotal&&subtotal<rule.minCartTotal){reason='هذا الكوبون يتطلب مجموعًا لا يقل عن '+money(rule.minCartTotal)+'.'}
+       else{
+         discount=rule.type==='percent'?Math.round(eligibleAmount*rule.value/100):rule.value;
+         if(rule.maxDiscount)discount=Math.min(discount,rule.maxDiscount);
+         discount=Math.max(0,Math.min(eligibleAmount,Math.round(discount)));
+         if(discount>0){
+           let remaining=discount;
+           eligible.forEach((line,index)=>{
+             const allocated=index===eligible.length-1?remaining:Math.floor(discount*line.subtotal/eligibleAmount);
+             line.discount=Math.max(0,Math.min(line.subtotal,allocated));
+             remaining-=line.discount;
+           });
+           matchedCoupon=rule;
+         }else reason='الكوبون لا يحقق خصمًا على هذه السلة.';
+       }
+     }
+   }
+ }
+ return {lines,subtotal,discount,total:Math.max(0,subtotal-discount),coupon:matchedCoupon,reason};
+}
+function couponFeedback(message,type=''){
+ const target=$('#couponFeedback');
+ target.textContent=message;
+ target.className='coupon-feedback'+(type?' '+type:'');
+}
+function removeActiveCoupon(message='تمت إزالة الكوبون.'){
+ appliedCoupon='';safeSet('visionAppliedCoupon','');
+ $('#couponCode').value='';
+ couponFeedback(message);
+ updateCart();
+}
+function applyCoupon(event){
+ event.preventDefault();
+ const input=normalizeCouponCode($('#couponCode').value);
+ if(!input){couponFeedback('أدخل رمز الكوبون أولاً.','error');return}
+ if(!cart.length){couponFeedback('أضف منتجًا للسلة قبل تطبيق الكوبون.','error');return}
+ const result=calculateOrder(input);
+ if(!result.coupon){
+   couponFeedback(result.reason||'الكوبون غير متاح لهذا الطلب.','error');
+   return;
+ }
+ appliedCoupon=input;
+ safeSet('visionAppliedCoupon',input);
+ couponFeedback('تم تطبيق '+input+' بنجاح، وخصم '+money(result.discount)+' من المنتجات المشمولة.','success');
+ updateCart();
+}
+async function loadStoreCoupons(){
+ try{
+  const response=await fetch('./coupons.json?v=1',{cache:'no-store'});
+  if(!response.ok)throw Error('Coupon config was not found');
+  const payload=await response.json();
+  storeCoupons=Array.isArray(payload.coupons)?payload.coupons.filter(validCouponRule):[];
+  couponsLoaded=true;
+  couponsLoadError=false;
+  const remembered=normalizeCouponCode(safeGet('visionAppliedCoupon')||'');
+  if(remembered&&calculateOrder(remembered).coupon){
+    appliedCoupon=remembered;
+    $('#couponCode').value=remembered;
+    couponFeedback('تم استعادة الكوبون '+remembered+'.','success');
+  }else if(remembered)safeSet('visionAppliedCoupon','');
+ }catch(error){storeCoupons=[];couponsLoaded=false;couponsLoadError=true;}
+ updateCart();
+}
+
 function renderCheckoutSummary(){
- const items=checkoutProducts();
- const sum=items.reduce((total,item)=>total+item.qty*item.product.price,0);
- $('#checkoutSummary').innerHTML=items.map(item=>'<div class="cartrow"><span>'+esc(item.product.name)+' <b>× '+item.qty+'</b><br><small>'+esc(item.product.type)+'</small></span><b>'+money(item.qty*item.product.price)+'</b></div>').join('')+'<div class="cartrow total"><span>المجموع (بدون أجور التوصيل)</span><b>'+money(sum)+'</b></div>';
+ const order=calculateOrder();
+ $('#checkoutSummary').innerHTML=order.lines.map(item=>'<div class="cartrow"><span>'+esc(item.product.name)+' <b>× '+item.qty+'</b><br><small>'+esc(item.product.type)+(item.discount?' · خصم '+money(item.discount):'')+'</small></span><b>'+money(item.subtotal-item.discount)+'</b></div>').join('')+
+ '<div class="cartrow"><span>المجموع قبل الخصم</span><b>'+money(order.subtotal)+'</b></div>'+
+ (order.coupon?'<div class="cartrow coupon-summary-line"><span>كوبون '+esc(normalizeCouponCode(order.coupon.code))+'</span><b>− '+money(order.discount)+'</b></div>':'')+
+ '<div class="cartrow total"><span>المجموع بعد الخصم (بدون التوصيل)</span><b>'+money(order.total)+'</b></div>';
  $('#checkoutError').textContent='';
 }
 function whatsappDestination(){
@@ -263,7 +414,7 @@ function whatsappDestination(){
 }
 function makeWhatsAppMessage(form){
  const items=checkoutProducts();
- const total=items.reduce((sum,item)=>sum+item.product.price*item.qty,0);
+ const order=calculateOrder();
  const str=v=>String(v||'').trim();
  const lines=[
  '🛍️ *طلب جديد من متجر رؤية للنظارات*',
@@ -283,15 +434,23 @@ function makeWhatsAppMessage(form){
   lines.push('التصنيف: '+p.type);
   lines.push('اللون: '+p.color+' | الشكل: '+p.shape);
   lines.push('الكمية: '+item.qty);
+  const priced=order.lines.find(row=>row.product.id===p.id);
   lines.push('السعر: '+money(p.price)+' للقطعة');
-  lines.push('الإجمالي: '+money(p.price*item.qty));
+  lines.push('إجمالي المنتج قبل الخصم: '+money(p.price*item.qty));
+  if(priced&&priced.discount){
+   lines.push('خصم الكوبون على المنتج: − '+money(priced.discount));
+   lines.push('إجمالي المنتج بعد الخصم: '+money(priced.subtotal-priced.discount));
+  }
   // رابط الصورة المعروضة لنفس المنتج في الموقع، صورة واحدة لكل نوع منتج
   if(Array.isArray(p.gallery)&&typeof p.gallery[0]==='string'&&/^https:\/\//.test(p.gallery[0])){
    lines.push('📷 صورة المنتج: '+photo(p.gallery[0],1150));
   }
   lines.push('');
  });
- lines.push('💰 *المجموع: '+money(total)+'*');
+ lines.push('💰 *المجموع قبل الخصم: '+money(order.subtotal)+'*');
+ if(order.coupon){lines.push('🎟️ كوبون: '+normalizeCouponCode(order.coupon.code));lines.push('قيمة الخصم: − '+money(order.discount));}
+ lines.push('💰 *المجموع بعد الخصم: '+money(order.total)+'*');
+ if(order.coupon)lines.push('ملاحظة: الخصم يخضع لتأكيد المتجر.');
  lines.push('🚚 أجور التوصيل تُحدد عند تأكيد الطلب.');
  if(str(form.orderNotes))lines.push('📝 ملاحظات: '+str(form.orderNotes));
  lines.push('','يرجى تأكيد توفر المنتجات وتفاصيل التوصيل، شكرًا.');
@@ -310,8 +469,27 @@ function sendCheckoutToWhatsApp(event){
  window.location.assign(url);
 }
 
-function updateCart(){safeSet('visionCart',JSON.stringify(cart));$('#cartCount').textContent=cart.length;$('#cartTotal').textContent=money(cart.reduce((a,id)=>a+(products.find(p=>p.id===id)?.price||0),0));$('#cartList').innerHTML=cart.length?cart.map((id,i)=>{const p=products.find(x=>x.id===id);return `<div class="cartrow"><span>${esc(p?.name||'منتج')}<br><small>${money(p?.price||0)}</small></span><button data-remove="${i}">حذف</button></div>`}).join(''):'<div class="empty">سلتك فارغة حاليًا</div>'}
+function updateCart(){
+ safeSet('visionCart',JSON.stringify(cart));
+ if(appliedCoupon&&couponsLoaded&&!calculateOrder().coupon){
+  appliedCoupon='';safeSet('visionAppliedCoupon','');$('#couponCode').value='';
+  couponFeedback('الكوبون لم يعد صالحًا لمحتويات السلة الحالية، وتم إلغاؤه.','error');
+ }
+ const order=calculateOrder();
+ $('#cartCount').textContent=cart.length;
+ $('#cartSubtotal').textContent=money(order.subtotal);
+ $('#cartTotal').textContent=money(order.total);
+ $('#cartDiscount').textContent='− '+money(order.discount);
+ $('#cartDiscountRow').hidden=!order.coupon;
+ $('#cartDiscountLabel').textContent=order.coupon?'خصم الكوبون ('+normalizeCouponCode(order.coupon.code)+')':'قيمة الخصم';
+ $('#removeCoupon').classList.toggle('visible',!!order.coupon);
+ $('#cartList').innerHTML=cart.length?cart.map((id,i)=>{
+  const p=products.find(x=>x.id===id);
+  const discounted=order.lines.find(line=>line.product.id===id&&line.discount>0);
+  return '<div class="cartrow"><span>'+esc(p?.name||'منتج')+'<br><small>'+money(p?.price||0)+'</small>'+(discounted?'<span class="cart-item-discount">هذا المنتج مشمول بالكوبون</span>':'')+'</span><button type="button" data-remove="'+i+'" aria-label="حذف المنتج من السلة">حذف</button></div>';
+ }).join(''):'<div class="empty">سلتك فارغة حاليًا</div>';
+}
 function toast(s){$('#toast').textContent=s;$('#toast').classList.add('show');setTimeout(()=>$('#toast').classList.remove('show'),2500)}function openModal(id){$('#'+id).classList.add('open');document.body.style.overflow='hidden'}function closeAll(){document.querySelectorAll('.overlay').forEach(x=>x.classList.remove('open'));document.body.style.overflow='';if(location.hash.startsWith('#product-'))history.replaceState(null,'','#products')}
-document.addEventListener('click',e=>{let view=e.target.closest('[data-view]'),thumb=e.target.closest('[data-thumb]'),add=e.target.closest('[data-add]'),fav=e.target.closest('[data-fav]'),rem=e.target.closest('[data-remove]'),cat=e.target.closest('[data-category]'),jump=e.target.closest('[data-jump-filter]');if(view)showProduct(Number(view.dataset.view));if(thumb)switchPhoto(Number(thumb.dataset.thumb));if(add){cart.push(Number(add.dataset.add));updateCart();toast('تمت إضافة المنتج للسلة')}if(fav){let id=Number(fav.dataset.fav);favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];render()}if(rem){cart.splice(Number(rem.dataset.remove),1);updateCart()}if(cat)setFilter(cat.dataset.category,true);if(jump)setFilter(jump.dataset.jumpFilter,true);if(e.target.matches('[data-book]'))openModal('bookingOverlay');if(e.target.matches('[data-close]')||e.target.classList.contains('overlay'))closeAll()});document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>setFilter(b.dataset.filter,false));$('#cartBtn').onclick=()=>{updateCart();openModal('cartOverlay')};$('#searchBtn').onclick=()=>{$('#searchBar').classList.toggle('open');$('#searchInput').focus()};$('#searchInput').oninput=e=>{query=e.target.value.trim();render()};$('#searchInput').onkeydown=e=>{if(e.key==='Enter'){$('#products').scrollIntoView();$('#searchBar').classList.remove('open')}};$('#mobileBtn').onclick=()=>$('#navlinks').classList.toggle('open');document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>$('#navlinks').classList.remove('open'));$('#dateField').min=new Date().toLocaleDateString('en-CA');$('#bookingForm').onsubmit=e=>{e.preventDefault();const fd=new FormData(e.target);const b=Object.fromEntries(fd.entries());safeSet('visionLastBooking',JSON.stringify(b));closeAll();e.target.reset();toast('تم تسجيل الطلب على هذا الجهاز فقط — يلزم ربطه بوسيلة تواصل للتأكيد')};$('#subscribeForm').onsubmit=e=>{e.preventDefault();toast('النشرة البريدية تحتاج ربطًا بخدمة إرسال قبل التشغيل');e.target.reset()};$('#checkoutBtn').onclick=()=>{if(!checkoutProducts().length){toast('السلة فارغة، أضف منتجًا أولاً');return}renderCheckoutSummary();closeAll();openModal('checkoutOverlay')};$('#checkoutForm').onsubmit=sendCheckoutToWhatsApp;$('#backToCart').onclick=()=>{closeAll();openModal('cartOverlay')};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});render();updateCart();upgradePhotos(document);
+document.addEventListener('click',e=>{let view=e.target.closest('[data-view]'),thumb=e.target.closest('[data-thumb]'),add=e.target.closest('[data-add]'),fav=e.target.closest('[data-fav]'),rem=e.target.closest('[data-remove]'),cat=e.target.closest('[data-category]'),jump=e.target.closest('[data-jump-filter]');if(view)showProduct(Number(view.dataset.view));if(thumb)switchPhoto(Number(thumb.dataset.thumb));if(add){cart.push(Number(add.dataset.add));updateCart();toast('تمت إضافة المنتج للسلة')}if(fav){let id=Number(fav.dataset.fav);favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];render()}if(rem){cart.splice(Number(rem.dataset.remove),1);updateCart()}if(cat)setFilter(cat.dataset.category,true);if(jump)setFilter(jump.dataset.jumpFilter,true);if(e.target.matches('[data-book]'))openModal('bookingOverlay');if(e.target.matches('[data-close]')||e.target.classList.contains('overlay'))closeAll()});document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>setFilter(b.dataset.filter,false));$('#cartBtn').onclick=()=>{updateCart();openModal('cartOverlay')};$('#searchBtn').onclick=()=>{$('#searchBar').classList.toggle('open');$('#searchInput').focus()};$('#searchInput').oninput=e=>{query=e.target.value.trim();render()};$('#searchInput').onkeydown=e=>{if(e.key==='Enter'){$('#products').scrollIntoView();$('#searchBar').classList.remove('open')}};$('#mobileBtn').onclick=()=>$('#navlinks').classList.toggle('open');document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>$('#navlinks').classList.remove('open'));$('#dateField').min=new Date().toLocaleDateString('en-CA');$('#bookingForm').onsubmit=e=>{e.preventDefault();const fd=new FormData(e.target);const b=Object.fromEntries(fd.entries());safeSet('visionLastBooking',JSON.stringify(b));closeAll();e.target.reset();toast('تم تسجيل الطلب على هذا الجهاز فقط — يلزم ربطه بوسيلة تواصل للتأكيد')};$('#subscribeForm').onsubmit=e=>{e.preventDefault();toast('النشرة البريدية تحتاج ربطًا بخدمة إرسال قبل التشغيل');e.target.reset()};$('#couponForm').onsubmit=applyCoupon;$('#removeCoupon').onclick=()=>removeActiveCoupon();loadStoreCoupons();$('#checkoutBtn').onclick=()=>{if(!checkoutProducts().length){toast('السلة فارغة، أضف منتجًا أولاً');return}renderCheckoutSummary();closeAll();openModal('checkoutOverlay')};$('#checkoutForm').onsubmit=sendCheckoutToWhatsApp;$('#backToCart').onclick=()=>{closeAll();openModal('cartOverlay')};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});render();updateCart();upgradePhotos(document);
 </script>
 </body></html>
