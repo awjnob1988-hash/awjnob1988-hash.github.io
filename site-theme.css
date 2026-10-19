@@ -1,0 +1,105 @@
+/* Optical store palette: accessible dark and light modes shared by the storefront. */
+.theme-toggle{font:inherit;appearance:none;background:rgba(255,255,255,.68);color:#1c4636;border:1px solid rgba(26,78,53,.16);border-radius:99px;padding:9px 12px;display:inline-flex;align-items:center;gap:8px;justify-content:center;min-height:42px;cursor:pointer;white-space:nowrap;transition:background .2s,border-color .2s,transform .2s}
+.theme-toggle:hover{background:#eaf3ea;transform:translateY(-1px)}
+.theme-toggle [data-theme-icon]{font-family:Arial,sans-serif;font-size:22px;line-height:1}
+.theme-toggle [data-theme-label]{font-size:11px;font-weight:700}
+.theme-toggle:focus-visible{outline:3px solid #acbd94;outline-offset:3px}
+html[data-theme="dark"]{color-scheme:dark;--ink:#e8f0e8;--muted:#9cb4a6;--green:#a2c6ae;--mint:#233d31;--line:rgba(198,225,205,.16);--cream:#13221c;--shadow:0 22px 60px rgba(0,0,0,.34);--brand-type-ink:#edf3ec}
+html[data-theme="dark"] body{background:#0d1713;color:#e8f0e8}
+html[data-theme="dark"] .topbar{background:rgba(13,24,19,.90);border-bottom-color:rgba(231,246,232,.09)}
+html[data-theme="dark"] .mini{background:#08130e;color:#d5e9d9}
+html[data-theme="dark"] .brand-name,html[data-theme="dark"] .links,html[data-theme="dark"] .links a{color:#e8f2e8}
+html[data-theme="dark"] .brand small{color:#acc2b3}
+html[data-theme="dark"] .brand-icon{border-color:#8bb29d;color:#bed2c4}
+html[data-theme="dark"] .iconbtn,html[data-theme="dark"] .theme-toggle{background:#20342a;border-color:#375547;color:#e1f0e5}
+html[data-theme="dark"] .theme-toggle:hover,html[data-theme="dark"] .iconbtn:hover{background:#2b4838}
+html[data-theme="dark"] .navcta,html[data-theme="dark"] .btn:not(.outline):not(.checkout-send){background:#477a60;color:#fff}
+html[data-theme="dark"] .btn:not(.outline):not(.checkout-send):hover{background:#598c70}
+html[data-theme="dark"] .outline{background:rgba(25,43,33,.76);color:#f1f5ef;border-color:rgba(225,244,225,.22)}
+html[data-theme="dark"] .links.open{background:#14261c;color:#f2f5f0}
+html[data-theme="dark"] .searchbar{background:#182a20;border-color:#294032}
+html[data-theme="dark"] .searchbar input{background:#17291f;color:#e9f1e9}
+html[data-theme="dark"] .hero{background:radial-gradient(circle at 12% 12%,rgba(57,89,67,.38),transparent 36%),linear-gradient(175deg,#16291f 0%,#101e18 68%,#0d1713 100%)}
+html[data-theme="dark"] .hero:before{background:rgba(57,91,70,.18)}
+html[data-theme="dark"] .hero:after{background:rgba(178,149,99,.10)}
+html[data-theme="dark"] .hero h1,html[data-theme="dark"] .hero h1 em{color:#f1f5eb}
+html[data-theme="dark"] .hero h1 em{color:#9fd1ab}
+html[data-theme="dark"] .eyebrow,html[data-theme="dark"] .kicker{color:#d6b98c}
+html[data-theme="dark"] .hero-copy>p,html[data-theme="dark"] .hero-stats small,html[data-theme="dark"] .lead,html[data-theme="dark"] .newsletter p{color:#adc2b2}
+html[data-theme="dark"] .hero-stats div{border-color:#35503e}
+html[data-theme="dark"] .hero-visual .floatcard{background:rgba(21,40,29,.90);color:#ecf3e9;border:1px solid #2c4b38}
+html[data-theme="dark"] .hero-photo{border-color:#365440;box-shadow:0 25px 65px rgba(0,0,0,.4)}
+html[data-theme="dark"] .features .feature,html[data-theme="dark"] .showcase-card{background:linear-gradient(150deg,#192c21,#17281e);border-color:#2b4836;box-shadow:0 10px 38px rgba(0,0,0,.18)}
+html[data-theme="dark"] .feature b,html[data-theme="dark"] .showcase-card h3{color:#eff5ec}
+html[data-theme="dark"] .feature span,html[data-theme="dark"] .showcase-card p{color:#a8c1ae}
+html[data-theme="dark"] .feature i,html[data-theme="dark"] .showcase-icon{background:#274334;color:#e4f4e5;border-color:#35513e}
+html[data-theme="dark"] .section h2,html[data-theme="dark"] .care-card h3,html[data-theme="dark"] .step h3,html[data-theme="dark"] .newsletter h2{color:#f1f5ed}
+html[data-theme="dark"] .subtlelink{color:#b9dcc1;border-color:#688d70}
+html[data-theme="dark"] .editorial-card.light{background:linear-gradient(145deg,#1c3529,#294936);color:#e7f1e6}
+html[data-theme="dark"] .editorial-card.sand{background:linear-gradient(145deg,#46392a,#635039);color:#fff3df}
+html[data-theme="dark"] .editorial-card.light .mini-chip,html[data-theme="dark"] .editorial-card.sand .mini-chip,html[data-theme="dark"] .editorial-card.light .eyebadge,html[data-theme="dark"] .editorial-card.sand .eyebadge{background:rgba(255,255,255,.09);color:inherit;border-color:rgba(255,255,255,.14)}
+html[data-theme="dark"] .care-card{background:linear-gradient(150deg,#1b2d22,#16261d);border-color:#2c4736}
+html[data-theme="dark"] .care-card p{color:#aec7b4}
+html[data-theme="dark"] .care-card .card-icon{background:#2a4937;color:#d6eddd}
+html[data-theme="dark"] .care-primary{background:linear-gradient(135deg,#234734,#0e251a)}
+html[data-theme="dark"] .quick-links a{background:#233b2c;color:#e5f0e7;border-color:#35533d}
+html[data-theme="dark"] .cat{background:#294332}
+html[data-theme="dark"] .products-area{background:linear-gradient(180deg,#0f2017,#0d1813)}
+html[data-theme="dark"] .products-area:before{opacity:.25}
+html[data-theme="dark"] .product-image-note{background:#203428;color:#b7cbbc;border-color:#3a5140}
+html[data-theme="dark"] .filters{background:rgba(19,39,27,.93);border-color:#33503b}
+html[data-theme="dark"] .filter{background:#20382b;border-color:#34513d;color:#d7e7d8}
+html[data-theme="dark"] .filter:hover{background:#2f533d}
+html[data-theme="dark"] .filter.active{background:#6ba183;color:#081e12;border-color:#6ba183}
+html[data-theme="dark"] .product,html[data-theme="dark"] .prodinfo{background:#182a20;border-color:#2e4936}
+html[data-theme="dark"] .product:hover{box-shadow:0 30px 62px rgba(0,0,0,.3)}
+html[data-theme="dark"] .prodimg{background:radial-gradient(circle at 50% 45%,#293d2d,#182b20)}
+html[data-theme="dark"] .product-preview img{background:linear-gradient(155deg,#314939,#1b3224)}
+html[data-theme="dark"] .product-preview span{background:rgba(20,39,27,.94);color:#eff8ed}
+html[data-theme="dark"] .prodname{color:#f1f6ee}
+html[data-theme="dark"] .prodtype,html[data-theme="dark"] .prodinfo h3{color:#adc6b6}
+html[data-theme="dark"] .price,html[data-theme="dark"] .detail-price{color:#c4e5cb}
+html[data-theme="dark"] .prodtag,html[data-theme="dark"] .prodimg .photo-indicator,html[data-theme="dark"] .fav{background:rgba(25,48,32,.94);color:#e5f2e7;border-color:#40604b}
+html[data-theme="dark"] .add{background:#2b4f37;color:#e5f6e8}
+html[data-theme="dark"] .add:hover{background:#48825c}
+html[data-theme="dark"] .banner{background:linear-gradient(110deg,#12291c,#264e36)}
+html[data-theme="dark"] .banner h2{color:#f7f5e9}
+html[data-theme="dark"] .banner p{color:#cbdccf}
+html[data-theme="dark"] .banner .btn{background:#f2f4e9!important;color:#173728!important}
+html[data-theme="dark"] .step,html[data-theme="dark"] .newsletter{background:#1a2c21;border-color:#2c4836}
+html[data-theme="dark"] .step p,html[data-theme="dark"] .newsletter p{color:#aac2b1}
+html[data-theme="dark"] .newsletter form{background:#14251b;border-color:#385742}
+html[data-theme="dark"] .newsletter input{background:transparent;color:#ecf3eb}
+html[data-theme="dark"] .footer{background:#07130d;color:#e5f1e7}
+html[data-theme="dark"] .footer p,html[data-theme="dark"] .footer a{color:#a6c1ab}
+html[data-theme="dark"] .overlay{background:rgba(0,6,4,.8)}
+html[data-theme="dark"] .modal{background:#17291f;border:1px solid #2c4735;box-shadow:0 34px 100px rgba(0,0,0,.5)}
+html[data-theme="dark"] .modal h2{color:#f3f5ee}
+html[data-theme="dark"] .modal p,html[data-theme="dark"] .checkout-hint{color:#a9c0b0!important}
+html[data-theme="dark"] .close{background:#2a4433;color:#e7f2e8}
+html[data-theme="dark"] .field,html[data-theme="dark"] .detail-specs b{color:#e3f2e8}
+html[data-theme="dark"] .field input,html[data-theme="dark"] .field select,html[data-theme="dark"] .field textarea,html[data-theme="dark"] .checkout-modal .field input,html[data-theme="dark"] .checkout-modal .field textarea{background:#213a2b;border-color:#385541;color:#e7f0e5}
+html[data-theme="dark"] .field input::placeholder,html[data-theme="dark"] .field textarea::placeholder{color:#9bb6a6}
+html[data-theme="dark"] .detail-main{background:linear-gradient(145deg,#1b3023,#2e4733)}
+html[data-theme="dark"] .detail-thumbs button{background:#20382a;border-color:#314f38}
+html[data-theme="dark"] .detail-thumbs button.selected{border-color:#8fc4a2}
+html[data-theme="dark"] .detail-copy,html[data-theme="dark"] .detail-specs span,html[data-theme="dark"] .detail-note,html[data-theme="dark"] .detail-disclaimer{color:#aec3b2!important}
+html[data-theme="dark"] .detail-specs,html[data-theme="dark"] .detail-specs div,html[data-theme="dark"] .cartrow{border-color:#365140}
+html[data-theme="dark"] .detail-back{color:#b6d8bd}
+html[data-theme="dark"] .gallery-hint{background:#223f2d;color:#bed4c0}
+html[data-theme="dark"] .checkout-summary,html[data-theme="dark"] .cart-coupon{background:linear-gradient(155deg,#20382b,#192e22);border-color:#395443}
+html[data-theme="dark"] .checkout-summary .total,html[data-theme="dark"] .cart-totals .grand-total,html[data-theme="dark"] .cart-coupon-heading b{color:#eef8ed}
+html[data-theme="dark"] .cart-coupon-form input{background:#14281c;color:#f1f5ed;border-color:#3a5b45}
+html[data-theme="dark"] .cart-coupon-form button{background:#417b57;color:#fff}
+html[data-theme="dark"] .cart-coupon .coupon-feedback{color:#b3cbb6!important}
+html[data-theme="dark"] .cart-coupon .coupon-feedback.success{color:#96dcab!important}
+html[data-theme="dark"] .cart-coupon .coupon-feedback.error{color:#f1a59f!important}
+html[data-theme="dark"] .cart-coupon-note,html[data-theme="dark"] .cart-coupon-heading small{color:#a5bfac!important}
+html[data-theme="dark"] .cart-totals .grand-total{border-color:#365240}
+html[data-theme="dark"] .cartrow button{background:#553332;color:#ffc8bd}
+html[data-theme="dark"] .checkout-modal .checkout-back{color:#b8d6c0}
+html[data-theme="dark"] .checkout-modal .btn.checkout-send{background:#36845b}
+html[data-theme="dark"] .empty{color:#a6c1ab}
+html[data-theme="dark"] .toast{background:#3f6a4d}
+@media(max-width:750px){.theme-toggle{min-width:38px;padding:8px 9px}.theme-toggle [data-theme-label]{display:none}}
+@media(prefers-reduced-motion:reduce){.theme-toggle{transition:none}}
